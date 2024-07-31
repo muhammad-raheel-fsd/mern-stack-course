@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>02 Lists and Tables</title>
+  </head>
+  <body>
+    <!-- Element -->
+
+    <!-- 
+    Parts of an element 
+      1- starting tag
+      2- ending tag
+      3- content
+      4- attribute
+        name="value"
+    -->
+
+    <tooltip title="Html is boring!"> Hover over me </tooltip>
+
+    <!-- Unordered list -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <!-- Ordered list -->
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ol>
+
+    <!-- Description list -->
+
+    <dl>
+      <dt>Human beings</dt>
+      <dd>Social animals (Interact with society)</dd>
+      <dt>Human beings</dt>
+      <dd>Social animals (Interact with society)</dd>
+    </dl>
+
+    <!-- Tables -->
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colspan="5">Shahid 2 x 1</td>
+          <td>20</td>
+          <td>shahid@gmail.com</td>
+          <td>1234567890</td>
+        </tr>
+
+        <tr>
+          <td>Shahid</td>
+          <td rowspan="3">20 3 x 2</td>
+          <td colspan="2">shahid@gmail.com 3 x 3</td>
+          <td>1234567890</td>
+        </tr>
+
+        <tr>
+          <td>Shahid</td>
+          <!-- <td>20</td> -->
+          <td>shahid@gmail.com</td>
+          <td>1234567890</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Spanned table -->
+    <h1>Spanned table</h1>
+    <table border="1">
+      <!-- <thead> -->
+      <tr>
+        <th rowspan="2">Cell 1</th>
+        <th colspan="2">Cell 2</th>
+        <!-- <th>Cell 3</th> -->
+        <th rowspan="2">Cell 4</th>
+      </tr>
+      <!-- </thead> -->
+      <!-- <tbody> -->
+      <tr>
+        <!-- <td>Value 1</td> -->
+        <td>Value 2</td>
+        <td>Value 3</td>
+        <!-- <td>Value 4</td> -->
+      </tr>
+
+      <tr>
+        <td>Value 1</td>
+        <td>Value 2</td>
+        <td>Value 3</td>
+        <td>Value 4</td>
+      </tr>
+      <tr>
+        <td>Value 1</td>
+        <td colspan="2" rowspan="2">Value 2 (4 x 2)</td>
+        <!-- <td>Value 3</td> -->
+        <td>Value 4</td>
+      </tr>
+      <tr>
+        <td>Value 1</td>
+        <!-- <td>Value 2</td> -->
+        <!-- <td>Value 3</td> -->
+        <td>Value 4</td>
+      </tr>
+      <!-- </tbody> -->
+    </table>
+  </body>
+</html>

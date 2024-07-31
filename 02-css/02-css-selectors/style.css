@@ -1,0 +1,29 @@
+/* Id selector */
+
+#heading{
+    background-color: yellow;
+}
+
+/* Element selector */
+
+h3{
+    background-color: violet;
+}
+
+/* Class selector */
+.main-heading{
+    background-color: red;
+}
+
+/* Universal selector - all */
+*{
+    background-color: green;
+}
+
+body{
+    background-color: bisque;
+}
+
+html{
+    background-color: tomato;
+}
