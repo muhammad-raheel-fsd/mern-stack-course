@@ -19,10 +19,11 @@ main {
 }
 
 /* Relative */
-/* vh, vw, rem */
+/* vh, vw, rem, vmin */
 
 html {
-  font-size: 20px;
+  font-size: calc(10px + 1vmin);
+  /* font-size: 20px; */
 }
 
 main {
@@ -57,5 +58,9 @@ vw: viewport width */
 div.box {
   width: 1rem;
   height: 1rem;
+  /* width: 10vmin;
+  height: 10vmin; */
   background-color: yellow;
 }
+
+/* 100/50 = 2/1 */

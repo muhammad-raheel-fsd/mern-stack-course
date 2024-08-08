@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: calc(12px + 1vmin);
+}
+
+div.box {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  /* transition-property: background-color, border-radius; */
+  /* transition-duration: 5s; */
+  /* transition-timing-function: linear; */
+  /* transition-timing-function: ease-out; */
+
+  animation-name: animate;
+  animation-duration: 1s;
+  /* animation-timing-function: linear; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+/* div.box:hover {
+  background-color: blue;
+  border-radius: 50%;
+} */
+
+/* Link, Visited, Hover, Active */
+
+/* a:link{
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: lightblue;
+}
+
+a:hover{
+  background-color: lightgreen;
+}
+
+a:active{
+  background-color: brown;
+}
+
+a:visited{
+  background-color: blue;
+} */
+
+a:link,
+a:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: lightblue;
+}
+
+a:hover,
+a:active {
+  background-color: lightgreen;
+}
+
+div.track {
+  width: 100%;
+  background-color: #242424;
+  height: 7rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+img {
+  height: 100%;
+  animation-name: race;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+div.track1 img {
+  animation-timing-function: linear;
+}
+
+div.track2 img {
+  animation-timing-function: ease-in;
+}
+
+div.track3 img {
+  animation-timing-function: ease-out;
+}
+
+div.track4 img {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-color: green;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes race {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(90vw);
+  }
+}
