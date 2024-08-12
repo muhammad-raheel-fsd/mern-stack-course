@@ -19,10 +19,10 @@ html {
   combinators
   1- descendant selector ( )
   2- child selector (>)
-  3- adjacent sibling selector (~)
-  2- general sibling selector (+)
+  3- adjacent sibling selector (+)
+  2- general sibling selector (~)
   */
-  
+
 /* 1- descendant selector ( ) */
 section.section_one p {
   background-color: green;
@@ -38,18 +38,18 @@ section.section_two p {
   background-color: red;
 }
 
-/* 3- adjacent sibling selector (~) */
+/* 3- adjacent sibling selector (+) */
 section.section_two > div > p ~ h1 {
   background-color: tomato;
 }
 
-/* 3- adjacent sibling selector (~) */
+/* 3- adjacent sibling selector (+) */
 section.section_one > p ~ h3 {
   background-color: bisque;
 }
 
-/* 2- general sibling selector (+) */
+/* 2- general sibling selector (~) */
 
-section.section_one > h3 + p{
+section.section_one > h3 + p {
   background-color: blueviolet;
 }
