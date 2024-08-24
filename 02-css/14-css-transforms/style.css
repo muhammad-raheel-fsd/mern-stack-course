@@ -41,6 +41,7 @@ div.box {
   line-height: 15rem;
   text-align: center;
   font-size: 60px;
+  position: relative;
 }
 
 /*
@@ -55,7 +56,7 @@ div.box:hover {
   /* transform: translateX(30px) translateY(30px); */
   /* transform: translateX(-30px) translateY(-30px); */
 
-  transform: rotateY(45deg);
+  /* transform: rotateY(45deg); */
   /* transform: rotateX(-45deg); */
   /* transform: rotateY(-45deg); */
   /* transform: rotateZ(45deg); */
@@ -63,6 +64,13 @@ div.box:hover {
   /* transform: skewX(45deg); */
   /* transform: skewY(45deg); */
   /* transform: skew(90deg); */
+
+  transform: scale(2);
+
+  /* px, %, left, right, bottom, top */
+  /* transform-origin: 0% 0%; */
+  /* transform-origin: 0%; */
+
 }
 
 div.box1,
@@ -75,6 +83,22 @@ div.box2 {
   text-align: center;
   font-size: 70px;
   position: absolute;
+}
+
+div.dot{
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  /* left: 50%;
+  top: 50%; */
+
+  /* transform: translate(-50%, -50%); */
+
+  left: 0;
+  top: 0;
+
 }
 
 div.box1{
