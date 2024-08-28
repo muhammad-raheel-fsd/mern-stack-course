@@ -59,6 +59,7 @@ nav > a:first-child {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  perspective: 500px;
 }
 
 nav > a:first-child > i {
