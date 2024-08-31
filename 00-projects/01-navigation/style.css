@@ -2,9 +2,12 @@
 
 :root {
   --color-black: #0c0c0c;
+  --color-grey: #e7e7e7;
   --color-white: #ffffff;
   --color-yellow: #fcd900;
 }
+
+/* Global styles */
 
 * {
   margin: 0;
@@ -22,14 +25,56 @@ html {
 }
 
 body {
-  background-color: black;
+  /* background-color: black; */
 }
 
 a {
   display: inline-block;
 }
 
+span {
+  display: inline-block;
+}
+
+.center {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Navigation header goes here */
+
 nav {
+  background-color: var(--color-white);
+}
+
+nav > div.navigation_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey);
+  padding: 0.6rem 0;
+}
+
+nav > div.navigation_header > div.contact {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav > div.navigation_header > div.social_icons > *:not(:first-child) {
+  margin-left: 1rem;
+}
+
+nav > div.navigation_header > div.contact > i {
+  font-size: x-large;
+}
+
+nav > div.navigation_header > div.contact > div.details > p:last-child {
+  font-weight: bolder;
+}
+
+nav > div.primary_navigation {
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
@@ -38,12 +83,12 @@ nav {
   /* gap: 1.5rem; */
 }
 
-nav > a {
+nav > div.primary_navigation > a {
   padding: 0.7rem 1.5rem;
   transition: background-color 0.2s linear;
 }
 
-nav > a:hover {
+nav > div.primary_navigation > a:hover {
   background-color: var(--color-yellow);
 }
 
@@ -55,35 +100,60 @@ nav > a:hover {
     background-color: blue;
     } */
 
-nav > a:first-child {
+nav > div.primary_navigation > a:first-child {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   perspective: 500px;
 }
 
-nav > a:first-child > i {
+nav > div.primary_navigation > a:first-child > i {
   transition: transform 0.2s linear;
 }
 
-nav > a:first-child:hover > i {
+nav > div.primary_navigation > a:first-child:hover > i {
   transform: rotateX(180deg);
 }
 
-nav > a:first-child {
+nav > div.primary_navigation > a:first-child {
   position: relative;
 }
 
-nav > a:first-child > div.dropdown {
-  background-color: red;
+nav > div.primary_navigation > a:first-child > div.dropdown {
+  background-color: var(--color-white);
   position: absolute;
   left: 0;
   top: 100%;
-  height: 15rem;
-  width: 10rem;
+  /* height: 15rem; */
+  width: 20rem;
   display: none;
 }
 
-nav > a:first-child:hover > div.dropdown {
-    display: block;
-  }
+nav > div.primary_navigation > a:first-child:hover > div.dropdown {
+  display: block;
+}
+
+nav > div.primary_navigation > a:first-child > div.dropdown > * {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  border-bottom: 1px solid var(--color-black);
+}
+
+nav > div.primary_navigation > a:first-child > div.dropdown > *:hover {
+  background-color: var(--color-yellow);
+}
+
+/* Header goes here */
+
+header {
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(
+      to bottom right,
+      #000000a0,
+      rgba(0, 0, 0, 0.187)
+    ),
+    url("./assets/images/header_bg.png");
+  background-size: cover;
+  background-position: center;
+}
