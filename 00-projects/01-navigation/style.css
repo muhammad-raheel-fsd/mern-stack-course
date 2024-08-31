@@ -41,6 +41,10 @@ span {
   margin: 0 auto;
 }
 
+.vertical__space {
+  padding: 2rem 0;
+}
+
 /* Navigation header goes here */
 
 nav {
@@ -55,19 +59,19 @@ nav > div.navigation_header {
   padding: 0.6rem 0;
 }
 
-nav > div.navigation_header > div.contact {
+div.contact {
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-nav > div.navigation_header > div.social_icons > *:not(:first-child) {
-  margin-left: 1rem;
+div.contact > i {
+  font-size: x-large;
 }
 
-nav > div.navigation_header > div.contact > i {
-  font-size: x-large;
+nav > div.navigation_header > div.social_icons > *:not(:first-child) {
+  margin-left: 1rem;
 }
 
 nav > div.navigation_header > div.contact > div.details > p:last-child {
@@ -148,12 +152,77 @@ nav > div.primary_navigation > a:first-child > div.dropdown > *:hover {
 header {
   width: 100%;
   height: 70vh;
-  background-image: linear-gradient(
-      to bottom right,
-      #000000a0,
-      rgba(0, 0, 0, 0.187)
-    ),
+  background-image: linear-gradient(to bottom left, #00000012, #0000000d),
     url("./assets/images/header_bg.png");
+  /* background-image: url("./assets/images/header_bg.png"); */
   background-size: cover;
   background-position: center;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+header > div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* align-self: center; */
+}
+
+header > div > h2 {
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+header > div > div.cta_buttons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header > div > div.cta_buttons > a {
+  background-color: var(--color-yellow);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Who we are */
+
+section div.section_container {
+  display: flex;
+  gap: 4rem;
+}
+
+section div.section_container > h3 {
+  text-transform: capitalize;
+}
+
+section div.section_container > div.about_us {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+section div.section_container > div.about_us > div.about_cta > a:first-child {
+  background-color: var(--color-yellow);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+}
+section div.section_container > div.about_us > div.about_cta > a:last-child {
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+section div.section_container > div.testimonials {
+  flex-shrink: 0;
+  flex-grow: 1;
+  background-color: orange;
 }
