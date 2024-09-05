@@ -27,6 +27,9 @@ html {
 body {
   /* background-color: black; */
 }
+section {
+  position: relative;
+}
 
 a {
   display: inline-block;
@@ -240,21 +243,47 @@ section div.section_container > div.testimonials > *:not(:last-child) {
 }
 
 section.what_we_do {
-  background: linear-gradient(to top, #00000043, transparent), url("./assets/images/what_we_do_bg.png");
+  background: linear-gradient(to top, #00000043, transparent),
+    url("./assets/images/what_we_do_bg.png");
   padding-bottom: 0;
 }
 
 section.what_we_do > div.center div.services_wrapper {
- display: flex;
- gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
-section.what_we_do > div.center div.services_wrapper > div.service_card{
+section.what_we_do > div.center div.services_wrapper > div.service_card {
   padding: 1rem;
-text-align: center;
+  text-align: center;
 }
 
-div.service_card:first-child{
+div.service_card:first-child {
   background-color: var(--color-white);
+}
+section div.packaging_machines {
+  width: 70%;
+}
 
+section div.filling_and_packaging > .plan_a_meeting {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 30%;
+  height: 10rem;
+  background-color: var(--color-yellow);
+}
+
+section div.packaging_machines > div.cards_wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+section div.packaging_machines > div.cards_wrapper > .card {
+  min-width: 0px;
+}
+
+div.cards_wrapper > .card > img {
+  width: 100%;
 }
