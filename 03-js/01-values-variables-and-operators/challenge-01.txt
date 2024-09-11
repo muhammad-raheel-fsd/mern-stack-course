@@ -52,7 +52,7 @@ Store the heights (in meters) of two people in variables height1 and height2.
 
 Calculate their average height using the formula:
 
-Average Height = (height1 + height2) / 2
+Average Height = height1 + height2 / 2
 
 Print the result.
 
@@ -126,6 +126,9 @@ Data 2: Person A (mass = 72 kg, height = 1.60 m), Person B (mass = 72 kg, height
 
 
 <============== Task 09 goes here  ================>
+
+What is if else and elseif in js? (self learning)
+
 Grade Calculator
 Your tasks:
 
