@@ -1,5 +1,5 @@
 <============== Task 01 goes here  ================>
-1. Calculate Average of Three Numbers
+1. Write a function to Calculate Average of Three Numbers
 Your tasks:
 
 Store three numbers in variables num1, num2, and num3.
@@ -12,7 +12,7 @@ Print the result.
 
 
 <============== Task 02 goes here  ================>
-2. Calculate Speed
+2. Write a function to Calculate Speed
 Your tasks:
 
 Store a distance (in kilometers) and time (in hours) in variables distance and time.
@@ -32,7 +32,7 @@ Data 2: distance = 100 km, time = 1.5 hours
 
 
 <============== Task 03 goes here  ================>
-3. Total Price of Multiple Items
+3. Write a function to find Total Price of Multiple Items
 Your tasks:
 
 Store the prices of three items in variables price1, price2, and price3.
@@ -45,7 +45,7 @@ Data 2: price1 = 50, price2 = 20, price3 = 30
 
 
 <============== Task 04 goes here  ================>
-4. Compare Average Heights
+4. Write a function to Compare Average Heights
 Your tasks:
 
 Store the heights (in meters) of two people in variables height1 and height2.
@@ -63,7 +63,7 @@ Data 2: height1 = 1.65 meters, height2 = 1.70 meters
 
 
 <============== Task 05 goes here  ================>
-5. Find Time Taken to Cover Distance
+5. Write a function to Find Time Taken to Cover Distance
 Your tasks:
 
 Store the speed (in km/h) and distance (in km) in variables speed and distance.
@@ -82,7 +82,7 @@ Data 2: speed = 80 km/h, distance = 160 km
 
 
 <============== Task 06 goes here  ================>
-Check if a Number is Positive or Negative
+6. Write a function that Checks if a Number is Positive or Negative
 Your tasks:
 
 Store a number in a variable num.
@@ -95,7 +95,7 @@ Data 2: num = -3
 
 
 <============== Task 07 goes here  ================>
-Check if a Number is Even or Odd
+7. Write a function to Check if a Number is Even or Odd
 Your tasks:
 
 Store a number in a variable number.
@@ -108,7 +108,7 @@ Data 2: number = 7
 
 
 <============== Task 08 goes here  ================>
-Calculate and Compare Two BMIs
+8. Write a function to Calculate and Compare Two BMIs
 Your tasks:
 
 Store the mass and height for two individuals (Person A and Person B) in variables.
@@ -129,7 +129,7 @@ Data 2: Person A (mass = 72 kg, height = 1.60 m), Person B (mass = 72 kg, height
 
 What is if else and elseif in js? (self learning)
 
-Grade Calculator
+9. Write a function for Grade Calculation
 Your tasks:
 
 Store a student's score in a variable score.
@@ -154,7 +154,7 @@ Data 1: age = 20
 Data 2: age = 16
 
 <============== Task 10 goes here  ================>
-Check if a Triangle is Valid
+10. Write a function to Check if a Triangle is Valid
 Your tasks:
 
 Store the three angles of a triangle in variables angle1, angle2, and angle3.

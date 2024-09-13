@@ -139,7 +139,15 @@ console.log("LOGICALS ======== ", !!true);
 const condition = true;
 const eligibleAge = 19;
 
+if (false) console.log("Random Statement");
+console.log("Random Statement");
+console.log("Random Statement");
+console.log("Random Statement");
+
 if (condition) {
+  console.log("True case");
+  console.log("True case");
+  console.log("True case");
   console.log("True case");
 } else {
   console.log("False case");
@@ -151,9 +159,82 @@ if (eligibleAge >= 20) {
   console.log("You are not eligible for a driving lisense");
 }
 
-// Average of three numbers
+const marks = 90;
 
+if (marks >= 80 && marks <= 89) {
+  // return "You are eligible for a driving";
+  console.log("Your grade is A");
+} else if (marks >= 70) {
+  console.log("Your grade is B");
+} else if (marks >= 60) {
+  console.log("Your grade is C");
+} else {
+  console.log("Better luck next time.");
+}
+
+// Switch statement
+
+const myCity = "Lahore";
+
+switch (myCity) {
+  case "Burewala":
+    console.log("Your city is: ", myCity);
+    console.log("Another random value");
+    break;
+  case "Lahore":
+    console.log("Your city is:" + myCity);
+    console.log("Your city is: ", myCity);
+    break;
+  default:
+    console.log("Invalid address");
+}
+
+// Average of three numbers
 console.log("Average of three numbers", (2 + 6 + 10) / 3);
+
+// Strings and template literals
+const username = "Raheel";
+const yourAge = 40;
+
+console.log(
+  "Your  name is " + username + "         and age               is " + yourAge
+);
+
+console.log(`Your 
+  name
+   is
+    ${username} and your age is ${yourAge}`);
+
+// Functions
+
+function addition(a, b) {
+  return;
+  return a + b;
+}
+// Parameters, Arguments, return statements
+const result = addition(100, 200);
+
+console.log(addition(100, 200));
+console.log(result);
+
+// Example 01
+function averageOfThreeNumbers(firstValue, secondValue, thirdValue) {
+  return (firstValue + secondValue + thirdValue) / 3;
+}
+console.log(averageOfThreeNumbers(10, 20, 30));
+
+// Example 02
+function evenOrOddNumber(num) {
+  if (num % 2 === 0) {
+    return "The number is even";
+  } else {
+    return "The number is odd";
+  }
+}
+
+console.log(evenOrOddNumber(30));
 
 // Type conversion
 // Type coersion
+
+
