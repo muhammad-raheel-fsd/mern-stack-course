@@ -234,7 +234,42 @@ function evenOrOddNumber(num) {
 
 console.log(evenOrOddNumber(30));
 
-// Type conversion
-// Type coersion
+// BMI
 
+const myHeight = 1.83;
+const myMass = 80;
 
+const BMI = myMass / myHeight ** 2;
+
+console.log(BMI);
+
+// Example 03
+
+// function compareTwoBMIs(p1Mass, p2Mass, p1Height, p2Height) {
+//   const p1BMI = calculateBMI(p1Mass, p1Height);
+//   const p2BMI = calculateBMI(p2Mass, p2Height);
+
+//   if (calculateBMI(p1Mass, p1Height) > calculateBMI(p2Mass, p2Height)) {
+//     // return `${p1Mass} kg, ${p1Height} m: has a higher BMI than ${p2Mass} kg, ${p2Height} m`;
+//     return "P1 has a higher BMI than P2";
+//   } else {
+//     return "P1 has a less BMI than P2";
+//   }
+// }
+
+// console.log(compareTwoBMIs(68, 85, 1.75, 1.8));
+
+function calculateBMI(mass, height) {
+  return mass / height ** 2;
+}
+
+console.log("BMI is : ", calculateBMI(80, 1.78));
+function compareTwoBMIs(p1BMI, p2BMI) {
+  return p1BMI > p2BMI;
+}
+
+if (compareTwoBMIs(calculateBMI(68, 1.8), calculateBMI(85, 1.75))) {
+  console.log("P1 has a higher BMI than P2");
+} else {
+  console.log("P1 has a less BMI than P2");
+}
