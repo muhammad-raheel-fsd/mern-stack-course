@@ -246,7 +246,7 @@ console.log(BMI);
 // Example 03
 
 // function compareTwoBMIs(p1Mass, p2Mass, p1Height, p2Height) {
-//   const p1BMI = calculateBMI(p1Mass, p1Height);
+//   const p1BMI =  (p1Mass, p1Height);
 //   const p2BMI = calculateBMI(p2Mass, p2Height);
 
 //   if (calculateBMI(p1Mass, p1Height) > calculateBMI(p2Mass, p2Height)) {
@@ -273,3 +273,16 @@ if (compareTwoBMIs(calculateBMI(68, 1.8), calculateBMI(85, 1.75))) {
 } else {
   console.log("P1 has a less BMI than P2");
 }
+
+function logger(message = "logger message goes here") {
+  // console.log("Message === ", message);
+  // return message;
+  return;
+}
+
+const functionLog = logger("something");
+// console.log("MESSAGE === ", functionLog, logger("something"));
+
+const something = "something";
+
+console.log(something);
