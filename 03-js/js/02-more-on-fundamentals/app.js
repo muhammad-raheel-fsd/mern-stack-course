@@ -138,7 +138,74 @@ const midAndAvgOfNumbers = function (arr) {
     return arr[(arr.length - 1) / 2];
   }
 };
-
-// Ternary operator
-
 console.log(midAndAvgOfNumbers(numbers));
+
+// Loops in arrays
+
+// 1- for loop
+// 2- while loop
+// 3- do while loop
+
+// 1- for loop
+// for(counter, condition, increment/decrement){
+
+// }
+
+const count = 5;
+// post increment / decrement
+// count++
+// pre increment
+// ++count;
+// console.log("count", ++count);
+// console.log("count", count++);
+
+console.log("count", --count);
+// console.log("count", count);
+// Ternary operator (expression)
+
+const condition = true;
+const trueCase = "There goes true statement";
+const falseCase = "There goes false statement";
+
+// condition ? console.log(trueCase) : console.log(falseCase);
+
+const value = condition ? trueCase : falseCase;
+console.log(value);
+
+// HOF (Higher Order Function) and callback
+
+function HOF(callback) {
+  // console.log("ARG", callback);
+  callback();
+}
+function loggerForCallback() {
+  console.log("Callback goes here");
+}
+HOF(loggerForCallback);
+
+// Average of three numbers
+function averageOfThree(num1, num2, num3, callback) {
+  const sum = num1 + num2 + num3;
+  const avg = sum / 3;
+  callback(avg);
+  return avg;
+}
+
+averageOfThree(10, 20, 30, function (avg) {
+  console.log("Average", avg);
+});
+
+function showSomething(something) {
+  console.log(something);
+}
+
+showSomething("Hello");
+
+showSomethingHoF(showSomethingCallback);
+
+function showSomethingHoF(callback) {
+  callback("Hello something");
+}
+function showSomethingCallback(arg) {
+  console.log(arg);
+}
