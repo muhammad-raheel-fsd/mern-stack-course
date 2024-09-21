@@ -270,7 +270,6 @@ function showSomething(something) {
 }
 
 showSomething("Hello");
-
 showSomethingHoF(showSomethingCallback);
 
 function showSomethingHoF(callback) {
@@ -279,3 +278,87 @@ function showSomethingHoF(callback) {
 function showSomethingCallback(arg) {
   console.log(arg);
 }
+
+// Arrays
+const someRandomNumbers = [1, 2, 3, 4, 5, 6, 7,8,9];
+// someRandomNumbers = [1, 6, 7];
+
+// const someNum = 10;
+// someNum = 10;
+
+// delete someRandomNumbers[5];
+
+// for (let index = 0; index < someRandomNumbers.length; index++) {
+//   console.log(someRandomNumbers[index]);
+// }
+
+someRandomNumbers[0] = 10;
+console.log("Random", someRandomNumbers[0], someRandomNumbers);
+
+// Objects
+
+const person = {
+  // Properties
+  personName: "Raheel",
+  name: "Raheel",
+  height: 6,
+  weight: 80,
+  male: true,
+  female: false,
+
+  // Methods
+  heWalks: function (username) {
+    this.personName = username;
+    // console.log(username)
+    console.log(`${this.personName} walks...`);
+    console.log(`${person.personName} walks...`);
+    console.log(`${person["personName"]} walks...`);
+
+    // return `${person["personName"]} walks...`
+  },
+};
+
+person.personName = "John";
+person["personName"] = "Celine";
+
+delete person.personName;
+delete person["name"];
+
+person.profession = "Development";
+person["age"] = 40;
+
+const someOne = "personName";
+console.log("Person", person);
+console.log("Person", person[someOne]);
+console.log("Person", person.personName);
+console.log("Person", person.height);
+person.heWalks("Rehman");
+console.log("Person", person);
+// console.log("Person", person);
+// console.log("Person", person.heWalks("Rehman"));
+// console.log("Person", name);
+// console.log("Person", someOne);
+
+// Basic array methods
+
+console.log(typeof person);
+console.log(typeof someRandomNumbers);
+
+// Insert a new value at the end of array
+someRandomNumbers[someRandomNumbers.length] = 100
+delete someRandomNumbers[someRandomNumbers.length - 1]
+console.log("ARRAY", someRandomNumbers)
+someRandomNumbers[someRandomNumbers.length] = 300
+console.log("ARRAY", someRandomNumbers)
+
+// 1- push, 2- pop, 3- shift, 4- unshift
+
+someRandomNumbers.push(1000)
+console.log("ARRAY", someRandomNumbers)
+
+// Remove last element
+someRandomNumbers.pop()
+console.log("ARRAY", someRandomNumbers)
+
+someRandomNumbers.push(2000)
+console.log("ARRAY", someRandomNumbers)
