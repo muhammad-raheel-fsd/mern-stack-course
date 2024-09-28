@@ -95,4 +95,55 @@ const shiftCallback = function (arr) {
 };
 const shiftedValue = higherOrderFunction(someRandomNumbers, shiftCallback);
 
-console.log("shifted", shiftedValue)
+console.log("shifted", shiftedValue);
+
+// Unshift element manually
+
+const unShiftElement = function (arr, element) {
+  const newArray = [];
+  for (let i = 0; i < arr.length + 1; i++) {
+    if (i === 0) {
+      console.log("Control", i, element);
+      newArray[i] = element;
+      continue;
+    }
+    newArray[i] = arr[i - 1];
+  }
+  return newArray;
+};
+
+const modifiedArray = unShiftElement(someRandomNumbers, "new value");
+
+console.log(
+  "Unshifting",
+  someRandomNumbers,
+  unShiftElement(someRandomNumbers, "new value")
+);
+
+// Object methods
+
+const username = "Janab";
+const person = {
+  // username: "person",
+  // username: username,
+  username,
+  age: 28,
+  getUserDetails: function () {
+    return `${this.username} is ${this.age} years old`;
+  },
+  toString: function (stringHere) {
+    return `${this.username} is ${this.age} years old`;
+  },
+};
+
+console.log(person);
+console.log("string", person.toString());
+console.log(typeof person.toString());
+
+// const newObject = Object()
+
+console.log({}, Object());
+console.log([]);
+console.log("construct", {}.constructor, Object());
+console.log({}.constructor());
+console.log([].constructor());
