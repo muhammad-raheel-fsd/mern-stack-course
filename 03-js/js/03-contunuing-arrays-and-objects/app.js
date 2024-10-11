@@ -10,6 +10,9 @@ const logger = function () {
 };
 logger();
 
+const scopeValue = "Global value...";
+var globalValue = "Global value...";
+
 // Array methods
 const someRandomNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // 0:1, 1:2, 2:3, 3:4, 4:5, 5:6, 6:7, 7:8, 8:9;
@@ -33,9 +36,16 @@ console.log("UNSHIFT", someRandomNumbers);
 
 // Shift element manually
 
+// {
+//   var justaValue = "just a value";
+// }
+
+// console.log("just a value", justaValue);
+
 const shiftElementM1 = function (arr) {
-  delete arr[0];
+  const aValue = "just a value";
   const newArray = [];
+  delete arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === undefined) continue;
     console.log("ELE", i, arr[i]);
@@ -81,6 +91,45 @@ someRandomNumbers.forEach(forEachCallback);
 //   console.log("LOG ===", log);
 // };
 // higherOrderFunction(callbackFunction);
+
+// Factorial
+// 5 fact = 5  * 4 * 3 * 2* 1
+
+// const factorial = function (number) {
+//   // num = 5
+//   let fact = 1;
+//   for (let index = number; index > 0; index--) {
+//     fact = fact * index;
+//     // console.log({ fact });
+//     // fact + fact
+//     // fact = fact + fact;
+//   }
+//   return fact;
+// };
+function factorial(number) {
+  // num = 5
+  let fact = 1;
+  for (let index = number; index > 0; index--) {
+    fact = fact * index;
+    // console.log({ fact });
+    // fact + fact
+    // fact = fact + fact;
+  }
+  return fact;
+}
+const factorialWithArray = function (arr) {
+  let fact = 1;
+  arr.forEach(function (value, index, arr) {
+    // continue;
+    // break;
+    fact = fact * value;
+  });
+  return fact;
+};
+
+console.log("FACT", factorial(5));
+console.log("FACT", factorialWithArray([5, 4, 3, 2, 1]));
+// factorial(5);
 
 const higherOrderFunction = function (arr, callback) {
   //   console.log("Shifted", callback(arr));
@@ -142,8 +191,60 @@ console.log(typeof person.toString());
 
 // const newObject = Object()
 
+const newObject = {};
+const newConstructObject = Object();
+
 console.log({}, Object());
 console.log([]);
 console.log("construct", {}.constructor, Object());
 console.log({}.constructor());
 console.log([].constructor());
+
+// Object methods
+const student = {
+  name: "Rehman",
+  fatherName: "Aman",
+  gender: "Male",
+  age: 17,
+  height: 6,
+  weight: 55,
+
+  getDetails: function () {
+    return `Name: ${this.name}, Father Name: ${this.fatherName}, Gender: ${this.gender}, Age: ${this.age}, Height: ${this.height}cm, Weight: ${this.weight}kg`;
+  },
+};
+
+// User defined method
+console.log(student);
+console.log(student.getDetails());
+
+// Built in methods
+console.log(student.hasOwnProperty("age"));
+
+// Constructor methods
+console.log("construct", Object);
+console.log("construct", factorial);
+// const obj = Object(student);
+// console.log("OBJ", obj);
+console.log(Object.keys(student));
+console.log(Object.values(student));
+console.log(Object.entries(student));
+
+// map, filter
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const callback = function (value, index, arr) {
+  console.log("CALLED", value);
+  const multiple = value * 2;
+  return multiple;
+};
+const mappedArray = numbers.map(callback);
+console.log("mappedArray", mappedArray);
+
+const filterCallback = function (value, index, arr) {
+  console.log("CALLED", value);
+  const isEven = value % 2 === 0;
+  return isEven;
+};
+const filteredArray = numbers.filter(filterCallback);
+console.log("filteredArray", filteredArray);
