@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #292929;
+}
+
+button {
+  padding: 20px 30px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-color: azure;
+  cursor: pointer;
+  font-size: larger;
+}
