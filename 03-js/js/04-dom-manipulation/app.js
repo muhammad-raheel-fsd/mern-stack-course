@@ -93,3 +93,14 @@ const button = document.getElementById("button");
 button.addEventListener("click", function (event) {
   console.log(event, "Clicked...");
 });
+
+// Attributes
+const newButton = document.querySelector("#new-button ");
+newButton.innerText = "New Button Here";
+console.log(newButton.getAttribute("id"));
+newButton.setAttribute("name", "new-button-name");
+newButton.removeAttribute("name");
+// console.log(newButton);
+
+newButton.setAttribute("class", "button-style");
+
