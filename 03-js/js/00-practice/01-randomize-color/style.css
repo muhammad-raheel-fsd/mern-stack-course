@@ -1,7 +1,7 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -23,4 +23,13 @@ button {
   background-color: azure;
   cursor: pointer;
   font-size: larger;
+}
+
+span#picker {
+  padding: 1rem 2rem;
+  font-size: large;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px black;
+  background-color: azure;
+  cursor: pointer;
 }
