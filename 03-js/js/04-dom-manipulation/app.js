@@ -1,3 +1,8 @@
+// BOM (Browser Object Model)
+// 1- Navigations
+// 2- DOM
+// 3- web apis
+
 // DOM (Document Object Model)
 
 // const DOM = {
