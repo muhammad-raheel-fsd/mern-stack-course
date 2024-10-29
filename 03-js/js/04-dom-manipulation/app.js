@@ -156,3 +156,17 @@ console.log(checkbox.classList.contains("check-base-styles"));
 checkbox.addEventListener("click", function (event) {
   event.target.classList.toggle("active-check-styles");
 });
+
+// Creating an arbitrary array
+
+console.log(new Array(10));
+console.log(Array.from("just something"));
+console.log(Array.from({ length: 12 }));
+
+// Tag name
+const list = Array.from(document.getElementsByTagName("li"));
+console.log(list);
+
+list.forEach(function (element) {
+  console.log({ element });
+});
