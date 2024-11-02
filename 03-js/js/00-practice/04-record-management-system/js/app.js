@@ -11,13 +11,18 @@ document.forms["student-details-form"].addEventListener(
     const previousRecordsArray =
       window.localStorage.getItem("records") ?? JSON.stringify([]);
     const previousRecordsArrayParsed = JSON.parse(previousRecordsArray);
-    debugger;
     console.log("previousRecordsArray", previousRecordsArrayParsed);
     previousRecordsArrayParsed.push(student);
     window.localStorage.setItem(
       "records",
       JSON.stringify(previousRecordsArrayParsed)
     );
+    // event.target.name.value = "";
+    // event.target.age.value = "";
+    // event.target.dob.value = "";
+    // event.target.gender.value = "";
+
+    event.target.reset();
   }
 );
 
