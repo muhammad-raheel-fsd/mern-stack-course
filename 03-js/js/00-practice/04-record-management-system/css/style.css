@@ -90,7 +90,7 @@ div#table-root > table {
   border: 0.1rem solid azure;
   border-radius: 0.2rem;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 tr,
@@ -108,4 +108,14 @@ td {
 th {
   background-color: azure;
   color: #111111;
+}
+
+.delete-button {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  color: azure;
+  font-weight: bolder;
+  font-size: larger;
+  cursor: pointer;
 }

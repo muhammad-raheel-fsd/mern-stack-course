@@ -1,4 +1,4 @@
-const records = JSON.parse(
+let records = JSON.parse(
   window.localStorage.getItem("records") ?? JSON.stringify([])
 );
 
@@ -16,6 +16,10 @@ head.forEach(function (element) {
   th.appendChild(textNode);
   tr.appendChild(th);
 });
+const thActions = document.createElement("th");
+const actionsTextNode = document.createTextNode("Actions");
+thActions.appendChild(actionsTextNode);
+tr.appendChild(thActions);
 
 records.forEach(function (element) {
   const tr = document.createElement("tr");
@@ -25,6 +29,23 @@ records.forEach(function (element) {
     td.appendChild(textNode);
     tr.appendChild(td);
   });
+
+  const button = document.createElement("button");
+  button.setAttribute("class", "delete-button");
+  const buttonText = document.createTextNode("Delete");
+  button.appendChild(buttonText);
+
+  button.addEventListener("click", function () {
+    tBody.removeChild(tr);
+    const filteredElements = records.filter(function (child) {
+      return child.name !== element.name;
+    });
+    window.localStorage.setItem("records", JSON.stringify(filteredElements));
+    records = filteredElements;
+    // window.location.reload();
+  });
+
+  tr.appendChild(button);
   tBody.appendChild(tr);
 });
 
