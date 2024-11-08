@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("Triggered...");
+});
+
 document.forms["student-details-form"].addEventListener(
   "submit",
   function (event) {
@@ -44,3 +48,8 @@ console.log(true ?? "Raheel");
 
 const data = null ?? [];
 data.length;
+
+addEventListener("visibilitychange", function (event) {
+  console.log("Visibility", document.visibilityState);
+  // console.log(event);
+});
