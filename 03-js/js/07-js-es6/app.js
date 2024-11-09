@@ -1,3 +1,9 @@
+// console.log(window.document.addEventListener)
+
+// document.querySelectorAll("button").forEach((button) => {
+//   console.log(button);
+// });
+
 // This keyword in js
 
 console.log("This =======>", this);
@@ -85,3 +91,89 @@ console.log(one, two, restArray);
 
 const { username, age, ...restObject } = user;
 console.log(username, age, restObject);
+
+// Difference
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+
+console.log(myGirls);
+console.log(...myGirls);
+const newArray = [...myGirls, ...myBoys];
+
+const sumUpSomeNumber = function (first, second, ...rest) {
+  console.log(arguments);
+  console.log(first, second, rest);
+};
+
+sumUpSomeNumber(10, 20);
+sumUpSomeNumber(10, 20, 30);
+sumUpSomeNumber(10, 20, 30, 40);
+sumUpSomeNumber(10, 20, 30, 40, 50);
+
+const userDetails = {
+  username: "user",
+  age: 30,
+  email: "user@gmail.com",
+  address: {
+    country: "Pakistan",
+    province: {
+      name: "Punjab",
+      city: {
+        name: "Burewala",
+        zipCode: 61010,
+        district: "Vehari",
+      },
+    },
+  },
+};
+
+// Aliasing
+const {
+  username: hisName,
+  age: hisAge,
+  email,
+  address: {
+    province: {
+      city: { zipCode },
+    },
+  },
+} = userDetails;
+
+// const { province } = address;
+// const { city } = province;
+// const { zipCode } = city;
+
+console.log(hisName, hisAge, zipCode);
+
+const course = {
+  mern_stack: {
+    html: {
+      modules: ["basics", "forms", "tables"],
+    },
+    css: {
+      modules: ["basics", "flexbox", "grid"],
+    },
+    js: {
+      modules: ["basics", "functions", "objects", "arrays", "events", "dom"],
+    },
+    react: {
+      modules: ["basics", "components", "props", "state", "hooks"],
+    },
+  },
+};
+
+const {
+  mern_stack: {
+    css: { modules: cssModules },
+    js,
+    // react: { modules: reactModules },
+  },
+} = course;
+
+// console.log(modules, js);
+
+// Optional chaining
+
+const currentModule = course.mern_stack.react?.modules
+console.log(currentModule);

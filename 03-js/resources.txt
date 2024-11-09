@@ -1,3 +1,3 @@
 1. https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/
-
 2. https://www.slingacademy.com/article/javascript-dom-cheat-sheet/
+3. https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
