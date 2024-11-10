@@ -175,5 +175,38 @@ const {
 
 // Optional chaining
 
-const currentModule = course.mern_stack.react?.modules
+const currentModule = course.mern_stack.react?.modules;
 console.log(currentModule);
+
+const arbitraryArray = undefined;
+console.log(arbitraryArray?.[2]);
+
+// import {
+//   posts,
+//   email as userEmail,
+//   username as importedUsername,
+// } from "./posts.js";
+
+import * as something from "./posts.js";
+import defaultUser from "./posts.js";
+
+const anotherUser = {
+  username: "app user",
+  email: "appuser@gmail.com",
+  age: 30,
+};
+
+console.log(something.posts);
+console.log(something.username);
+console.log(something.email);
+console.log(something.default);
+console.log(defaultUser);
+
+import someDefaultImport, { posts, username, email } from "./posts.js";
+
+debugger;
+
+// ES6 modules
+// posts.forEach((post) => {
+//   console.log(post.title);
+// });
