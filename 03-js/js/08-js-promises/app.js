@@ -208,3 +208,67 @@ const showSomeErrorAndResult = (arr) => {
 };
 
 showSomeErrorAndResult(20);
+
+
+console.log("Console log number: 1");
+console.log("Console log number: 2");
+console.log("Console log number: 3");
+console.log("Console log number: 4");
+console.log("Console log number: 5");
+
+function showSomething1(){
+  console.log("Timeout...");
+}
+
+setTimeout(showSomething1);
+
+function showSomething2(){
+  console.log("Timeout...");
+}
+
+setTimeout(showSomething2);
+
+function showSomething3(){
+  console.log("Timeout...");
+}
+
+setTimeout(showSomething3);
+
+// const promiseCallback = (resolve, reject) => {
+//     resolve("Promise resolved...");
+// };
+// const justAPromise = new Promise(promiseCallback);
+
+// function messageCallback (message) {console.log(message)}
+
+// justAPromise.then(messageCallback);
+// justAPromise.catch((err) => console.log(err));
+
+console.log("Console log number: 6");
+console.log("Console log number: 7");
+console.log("Console log number: 8");
+console.log("Console log number: 9");
+console.log("Console log number: 10");
+
+
+function tenth() { }
+
+function ninth() { tenth() }
+
+function eigth() { ninth() }
+
+function seventh() { eigth() }
+
+function sixth() { seventh() }
+
+function fifth() { sixth() }
+
+function fourth() { fifth() }
+
+function third() { fourth() }
+
+function second() { third() }
+
+function first() { second() }
+
+first();
