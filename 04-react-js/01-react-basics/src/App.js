@@ -1,6 +1,8 @@
 import React from "react";
-import Card from "./components/Card";
-import Form from "./components/Form";
+import Counter from "./components/02-states-and-props/Counter";
+import ReactInput from "./components/02-states-and-props/ReactInput";
+// import Card from "./components/01-fundamentals-and-components/Card";
+// import Form from "./components/01-fundamentals-and-components/Form";
 
 const App = () => {
   return (
@@ -16,8 +18,10 @@ const App = () => {
     // </>
 
     <React.Fragment>
-      <Card />
-      <Form />
+      {/* <Card /> */}
+      {/* <Form /> */}
+      <Counter title="Title of the counter" />
+      <ReactInput />
     </React.Fragment>
   );
 };
