@@ -1,6 +1,8 @@
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./css/style.css";
+import { BrowserRouter } from "react-router";
+
 const main = document.getElementById("root");
 const root = ReactDOM.createRoot(main);
 
@@ -16,4 +18,8 @@ const root = ReactDOM.createRoot(main);
 // );
 // root.render(<Form />);
 
-root.render(<App />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
