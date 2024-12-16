@@ -45,7 +45,7 @@ const App = () => {
       <Routes>
         <Route index element={<Counter title="Title of the counter" />} />
         {/* <Route path="/" element={<Counter title="Title of the counter" />} /> */}
-        <Route path="/react-input" element={<ReactInput />} />
+        <Route path="/react-input"  element={<ReactInput />}/>
         <Route path="/debounce-input" element={<DebounceInput />} />
 
         <Route path="components">
