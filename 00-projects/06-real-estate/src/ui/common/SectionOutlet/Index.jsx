@@ -3,7 +3,6 @@ import { CN } from "../../../utils";
 const SectionOutlet = (props) => {
   // const { children, title, className, id } = props;
   const { children, parentClassName, childClassName, ...rest } = props;
-  console.log("props", props);
   return (
     // <section id={id} className={className}>
     //   {children}
