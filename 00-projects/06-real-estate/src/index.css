@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#homepage {
+  /* background: linear-gradient(45deg, #0000005f, #00000039),
+    url(./assets/images/homepage-bg.png); */
+  /* background: url("./assets/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}

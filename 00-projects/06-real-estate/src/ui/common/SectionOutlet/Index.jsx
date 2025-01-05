@@ -8,8 +8,8 @@ const SectionOutlet = (props) => {
     // <section id={id} className={className}>
     //   {children}
     // </section>
-    <section {...rest} className={CN("w-full", parentClassName)}>
-      <div className={CN("max-w-[1100px], mx-auto", childClassName)}>{children}</div>
+    <section {...rest} className={CN("w-full min-h-screen", parentClassName)}>
+      <div className={CN("max-w-[1100px] mx-auto", childClassName)}>{children}</div>
     </section>
   );
 };

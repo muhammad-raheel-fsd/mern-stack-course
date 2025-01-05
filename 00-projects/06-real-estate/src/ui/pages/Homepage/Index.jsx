@@ -3,7 +3,12 @@ import NavigationMenu from "../../common/NavigationMenu/Index";
 
 const Homepage = () => {
   return (
-    <SectionOutlet childClassName="max-w-[1100px] bg-green-400">
+    <SectionOutlet
+      childClassName=""
+      parentClassName="min-h-screen p-10 bg-[url('./assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat"
+      id="homepage"
+      title="Homepage"
+    >
       <NavigationMenu />
     </SectionOutlet>
   );
