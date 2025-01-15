@@ -8,7 +8,7 @@
       "property_type": "Villa",
       "location": "California, USA",
       "price": "$450,000",
-      "rooms": 4,
+      "rooms": "4",
       "bathrooms": 2,
       "garages": 2
     },
