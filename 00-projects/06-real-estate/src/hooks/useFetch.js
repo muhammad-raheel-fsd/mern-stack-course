@@ -12,7 +12,7 @@ const useFetch = (url) => {
       .then((data) => setData(data))
       .catch((error) => setError(error))
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [url]);
 
   return { data, isLoading, error };
 };

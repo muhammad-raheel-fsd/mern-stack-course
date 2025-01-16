@@ -5,6 +5,7 @@ import FindHomeSection from "./ui/sections/FindHomeSection/Index";
 import OurMissionSection from "./ui/sections/OurMissionSection/Index";
 import TestimonialsSection from "./ui/sections/TestimonialsSection/Index";
 import RefresherPage from "./ui/pages/RefresherPage/Index";
+import ContextPage from "./ui/pages/ContextPage/Index";
 // import WhyChooseUsPage from "./ui/pages/WhyChooseUsPage/Index";
 // import FindHomePage from "./ui/pages/FindHomePage/Index";
 // import TestimonialsPage from "./ui/pages/TestimonialsPage/Index";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/our-mission" element={<OurMissionPage />} />
         */}
         <Route path="/refresher" element={<RefresherPage />} />
+        <Route path="/context" element={<ContextPage />} />
       </Routes>
     </>
   );
