@@ -5,9 +5,9 @@ import FiltersModule from "../../modules/FiltersModule/Index";
 
 const FindHomeSection = () => {
   const { data, isLoading, error } = useFetch(
-    "http://localhost:3000/homes?property_type_=Charming Bungalow"
+    `${import.meta.env.VITE_REACT_APP_API_URL}/homes`
   );
-  console.log("data =====>", data, isLoading, error);
+  // console.log("data =====>", data, isLoading, error);
   return (
     <SectionOutlet parentClassName="" id="find-a-home">
       <Typography variant="h2" before>

@@ -21,7 +21,11 @@ const RefresherPage = () => {
     data: homes,
     isLoading,
     error,
-  } = useFetch(`http://localhost:3000/homes?property_type=${debouncedValue}`);
+  } = useFetch(
+    `${
+      import.meta.env.VITE_REACT_APP_API_URL
+    }/homes?property_type=${debouncedValue}`
+  );
 
   //   let homes = [];
   //   let search = "";

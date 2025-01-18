@@ -240,5 +240,51 @@
       "bathrooms": 4,
       "garages": 3
     }
-  ]
+  ],
+  "filters": {
+    "looking_for": [
+      { "value": "buy", "label": "Buy" },
+      { "value": "rent", "label": "Rent" }
+    ],
+    "property_type": [
+      { "value": "Villa", "label": "Villa" },
+      { "value": "Apartment", "label": "Apartment" },
+      { "value": "House", "label": "House" },
+      { "value": "Cottage", "label": "Cottage" },
+      { "value": "Loft", "label": "Loft" },
+      { "value": "Beach House", "label": "Beach House" },
+      { "value": "Bungalow", "label": "Bungalow" },
+      { "value": "Estate", "label": "Estate" },
+      { "value": "Mansion", "label": "Mansion" }
+    ],
+    "location": [
+      { "label": "California, USA", "value": "California, USA" },
+      { "label": "New York, USA", "value": "New York, USA" },
+      { "label": "Miami, USA", "value": "Miami, USA" },
+      { "label": "Seattle, USA", "value": "Seattle, USA" },
+      { "label": "Aspen, USA", "value": "Aspen, USA" },
+      { "label": "Dallas, USA", "value": "Dallas, USA" },
+      { "label": "Minnesota, USA", "value": "Minnesota, USA" },
+      { "label": "Chicago, USA", "value": "Chicago, USA" },
+      { "label": "Denver, USA", "value": "Denver, USA" },
+      { "label": "Beverly Hills, USA", "value": "Beverly Hills, USA" },
+      { "label": "Santa Monica, USA", "value": "Santa Monica, USA" },
+      { "label": "Nashville, USA", "value": "Nashville, USA" },
+      { "label": "San Francisco, USA", "value": "San Francisco, USA" },
+      { "label": "Austin, USA", "value": "Austin, USA" },
+      { "label": "Vermont, USA", "value": "Vermont, USA" },
+      { "label": "Atlanta, USA", "value": "Atlanta, USA" },
+      { "label": "Houston, USA", "value": "Houston, USA" },
+      { "label": "Phoenix, USA", "value": "Phoenix, USA" },
+      { "label": "Portland, USA", "value": "Portland, USA" },
+      { "label": "Hawaii, USA", "value": "Hawaii, USA" }
+    ],
+    "price": [
+      { "label": "Under $100,000", "value": "Under $100,000" },
+      { "label": "$100,000 - $200,000", "value": "$100,000 - $200,000" },
+      { "label": "$200,000 - $300,000", "value": "$200,000 - $300,000" },
+      { "label": "$300,000 - $400,000", "value": "$300,000 - $400,000" },
+      { "label": "$400,000 - $500,000", "value": "$400,000 - $500,000" }
+    ]
+  }
 }
