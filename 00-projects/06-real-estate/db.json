@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Malto House",
-      "image": "image1.png",
+      "image": "https://images.unsplash.com/photo-1518791841217-8cc77978b23a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZXxlbnwwfHwwfHx8MA%3D%3D",
       "description": "A cozy and modern house with a beautiful garden view.",
       "property_type": "Villa",
       "location": "California, USA",
