@@ -6,6 +6,7 @@ import OurMissionSection from "./ui/sections/OurMissionSection/Index";
 import TestimonialsSection from "./ui/sections/TestimonialsSection/Index";
 import RefresherPage from "./ui/pages/RefresherPage/Index";
 import ContextPage from "./ui/pages/ContextPage/Index";
+import HomeDetailsPage from "./ui/pages/HomeDetailsPage/Index";
 // import WhyChooseUsPage from "./ui/pages/WhyChooseUsPage/Index";
 // import FindHomePage from "./ui/pages/FindHomePage/Index";
 // import TestimonialsPage from "./ui/pages/TestimonialsPage/Index";
@@ -27,6 +28,7 @@ function App() {
             </>
           }
         />
+        <Route path="/homes/:id" element={<HomeDetailsPage />} />
         {/* <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
         <Route path="/find-home" element={<FindHomePage />} />
         <Route path="/our-mission" element={<OurMissionPage />} />

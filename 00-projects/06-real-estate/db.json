@@ -1,7 +1,7 @@
 {
   "homes": [
     {
-      "id": "1",
+      "id": "malto-house",
       "title": "Malto House",
       "image": "https://images.unsplash.com/photo-1518791841217-8cc77978b23a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZXxlbnwwfHwwfHx8MA%3D%3D",
       "description": "A cozy and modern house with a beautiful garden view.",
@@ -10,10 +10,17 @@
       "price": "$450,000",
       "rooms": "4",
       "bathrooms": 2,
-      "garages": 2
+      "garages": 2,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"],
+      "owned_by": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+1234567890"
+      }
     },
     {
-      "id": "2",
+      "id": "modern-living",
       "title": "Modern Living",
       "image": "image2.png",
       "description": "A stylish apartment with open-concept living space.",
@@ -22,10 +29,12 @@
       "price": "$350,000",
       "rooms": 3,
       "bathrooms": 2,
-      "garages": 1
+      "garages": 1,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "3",
+      "id": "sunset-villa",
       "title": "Sunset Villa",
       "image": "image3.png",
       "description": "A luxurious villa with stunning sunset views.",
@@ -34,10 +43,12 @@
       "price": "$850,000",
       "rooms": 5,
       "bathrooms": 3,
-      "garages": 3
+      "garages": 3,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "4",
+      "id": "blue-paradise",
       "title": "Blue Paradise",
       "image": "image4.png",
       "description": "A serene house with blue-themed interiors.",
@@ -46,10 +57,12 @@
       "price": "$300,000",
       "rooms": 3,
       "bathrooms": 2,
-      "garages": 1
+      "garages": 1,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "5",
+      "id": "cozy-cottage",
       "title": "Cozy Cottage",
       "image": "image5.png",
       "description": "A charming cottage surrounded by nature.",
@@ -58,11 +71,13 @@
       "price": "$275,000",
       "rooms": 4,
       "bathrooms": 2,
-      "garages": 2
+      "garages": 2,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "6",
-      "title": "Malto House",
+      "id": "dallas-house",
+      "title": "Dallas House",
       "image": "image6.png",
       "description": "A modern and spacious home for families.",
       "property_type": "House",
@@ -70,10 +85,12 @@
       "price": "$400,000",
       "rooms": 4,
       "bathrooms": 2,
-      "garages": 2
+      "garages": 2,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "7",
+      "id": "lakeside-retreat",
       "title": "Lakeside Retreat",
       "image": "image7.png",
       "description": "A peaceful retreat by the lake with breathtaking views.",
@@ -82,10 +99,12 @@
       "price": "$500,000",
       "rooms": 3,
       "bathrooms": 2,
-      "garages": 2
+      "garages": 2,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "8",
+      "id": "urban-loft",
       "title": "Urban Loft",
       "image": "image8.png",
       "description": "A trendy loft in the heart of the city.",
@@ -94,10 +113,12 @@
       "price": "$450,000",
       "rooms": 2,
       "bathrooms": 1,
-      "garages": 1
+      "garages": 1,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "9",
+      "id": "mountain-getaway",
       "title": "Mountain Getaway",
       "image": "image9.png",
       "description": "A luxurious getaway in the mountains.",
@@ -106,10 +127,12 @@
       "price": "$900,000",
       "rooms": 5,
       "bathrooms": 4,
-      "garages": 3
+      "garages": 3,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
-      "id": "10",
+      "id": "luxury-estate",
       "title": "Luxury Estate",
       "image": "image10.png",
       "description": "An expansive estate with world-class amenities.",
@@ -118,7 +141,9 @@
       "price": "$2,500,000",
       "rooms": 6,
       "bathrooms": 5,
-      "garages": 4
+      "garages": 4,
+      "area": "1000 sq.ft",
+      "features": ["Swimming Pool", "Gym", "Garden", "Parking"]
     },
     {
       "id": "11",

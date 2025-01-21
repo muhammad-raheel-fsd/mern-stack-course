@@ -6,6 +6,7 @@ import { generateRandomString } from "../../../utils";
 import HomeCard from "../../common/HomeCard/Index";
 import React from "react";
 import { useSearchParams } from "react-router";
+import NavigationLink from "../../common/NavigationLink/Index";
 
 const FindHomeSection = () => {
   const [searchParams] = useSearchParams();
@@ -22,9 +23,11 @@ const FindHomeSection = () => {
       <div className="grid grid-cols-3 gap-4">
         {data &&
           data.length > 0 &&
-          data.map((home) => (
+          data.map(({ id, ...home }) => (
             <React.Fragment key={generateRandomString()}>
-              <HomeCard {...home} />
+              <NavigationLink to={`/homes/${id}`}>
+                <HomeCard {...home} />
+              </NavigationLink>
             </React.Fragment>
           ))}
       </div>
