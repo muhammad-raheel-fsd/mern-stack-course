@@ -10,14 +10,24 @@
 // console.log("FILE PATH ===========>", filePath);
 
 const fs = require("fs");
+const path = require("path");
+
+const filePath = path.resolve(path.dirname(""), "input.txt");
+console.log("FILE PATH ======================> ", filePath);
+
 // Asynchronous file system module
-fs.readFile("input.txt", function (err, data) {
+fs.readFile(filePath, "utf8", function (err, data) {
   if (err) {
-    return console.error(err);
+    return console.error("ERROR READING FILE ======================> ", err);
   }
   console.log("Asynchronous read ======================> ", data);
 });
 
+// Synchronous file system module
+const data = fs.readFileSync(filePath, "utf8");
+console.log("Synchronous read ======================> ", data);
+
 console.log(
   "===============================AFTER FILE READ================================"
 );
+

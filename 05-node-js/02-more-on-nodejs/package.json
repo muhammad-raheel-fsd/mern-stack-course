@@ -2,14 +2,17 @@
   "name": "02-more-on-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js",
-    "my-script": "node src/app.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "my-script": "node src/server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
 }

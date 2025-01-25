@@ -1,13 +1,13 @@
-const { data } = require("./data");
+// const { data } = require("./data");
 
-const showSomeData = () => {
-  console.log("Some Data ==========>");
-};
+// const showSomeData = () => {
+//   console.log("Some Data ==========>");
+// };
 
-showSomeData();
+// showSomeData();
 
-console.log(__dirname);
-console.log(__filename);
-console.log(module);
+// console.log(__dirname);
+// console.log(__filename);
+// console.log(module);
 
-console.log("data===========>", data);
+// console.log("data===========>", data);

@@ -1,23 +1,44 @@
-// import "./practice/httpModule.js";
+import fs from "fs";
+import path from "path";
 
-// File System module
-// import fs from "fs";
-// import path from "path";
+const resolvedPath = path.resolve(path.dirname(""), "src");
 
-// console.log("FILE SYSTEM MODULE ===========>", fs);
+console.log("FILE PATH ======================> ", resolvedPath);
 
-// const filePath = path.resolve(path.dirname(""), "data.txt");
-// console.log("FILE PATH ===========>", filePath);
-
-const fs = require("fs");
 // Asynchronous file system module
-fs.readFile("input.txt", function (err, data) {
-  if (err) {
-    return console.error(err);
-  }
-  console.log("Asynchronous read: " + data.toString());
+fs.readFile(path.join(resolvedPath, "./data/text.txt"), "utf8", (err, data) => {
+  if (err) console.error("ERROR READING FILE ======================> ", err);
+  // console.log("Asynchronous read ======================> ", data);
 });
 
-console.log(
-  "===============================AFTER FILE READ================================"
+// Synchronous file system module
+const data = fs.readFileSync(
+  path.join(resolvedPath, "./data/text.txt"),
+  "utf8"
 );
+// console.log("Synchronous read ======================> ", data);
+
+// Write to a file Asynchronously
+fs.writeFile(
+  path.join(resolvedPath, "./data/written.txt"),
+  "Hello, World!",
+  "utf-8",
+  (err) => {
+    if (err) console.error("ERROR WRITING FILE ======================> ", err);
+  }
+);
+
+// Append to a file Asynchronously
+fs.appendFile(
+  path.join(resolvedPath, "./data/written.txt"),
+  "Hello, World again!",
+  "utf-8",
+  (err) => {
+    if (err) console.error("ERROR APPENDING FILE ======================> ", err);
+  }
+);
+
+// Delete a file
+fs.unlink(path.join(resolvedPath, "./data/written.txt"), (err) => {
+  if (err) console.error("ERROR DELETING FILE ======================> ", err);
+});
