@@ -2,7 +2,21 @@ import http from "http";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
+import events from "events";
 dotenv.config();
+
+const eventEmitter = new events.EventEmitter();
+
+//Create an event handler:
+const myEventHandler = function () {
+  console.log("I hear a cry!");
+};
+
+//Assign the event handler to an event:
+eventEmitter.on("cry", myEventHandler);
+
+//Fire the 'scream' event:
+// eventEmitter.emit("scream");
 
 const PORT = process.env.PORT ?? 3000;
 const resolvedPath = path.resolve(path.dirname(""), "src");
@@ -20,8 +34,24 @@ const server = http.createServer((req, res) => {
   }
 
   if (method === "POST") {
-    const body = req.body;
-    res.end("Hello, World!");
+    eventEmitter.emit("cry");
+    let body = "";
+    req.on("data", (data) => {
+      body += data;
+    });
+    req.on("end", () => {
+      fs.writeFileSync(
+        path.join(resolvedPath, "./data/written.txt"),
+        body,
+        "utf-8"
+      );
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(
+        JSON.stringify({
+          message: "File created successfully",
+        })
+      );
+    });
   }
 
   if (method === "PUT") {
