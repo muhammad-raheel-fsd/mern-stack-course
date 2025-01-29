@@ -5,6 +5,25 @@ import path from "path";
 import events from "events";
 dotenv.config();
 
+// const users = ["Usman", "John", "Jane", "Doe"];
+// console.log(users.includes("john"));
+
+// export const generateRandomString = (length = 10) => {
+//   return Math.random()
+//     .toString(36)
+//     .substring(2, length + 2);
+// };
+
+console.log(Math.floor(Math.random() * 2));
+
+// const str = "A quick brown fox jumps over the lazy dog";
+// const str = "a-quick-brown-fox-jumps-over-the-lazy-dog";
+// console.log(str.split("-"));
+
+// const pathname = "/api/v1/users/123";
+const pathname = "/written";
+console.log(pathname.split("/")[1]);
+
 const eventEmitter = new events.EventEmitter();
 
 //Create an event handler:
@@ -22,13 +41,21 @@ const PORT = process.env.PORT ?? 3000;
 const resolvedPath = path.resolve(path.dirname(""), "src");
 
 const server = http.createServer((req, res) => {
+  const files = fs.globSync(path.join(resolvedPath, "./data/*.txt"));
+  const randomFilePath = files[Math.floor(Math.random() * files.length)];
+  console.log("Random File Path ==========>", randomFilePath);
   const method = req.method;
-
+  const url = new URL(`http://localhost:${PORT}${req.url}`);
+  const dynamicPathFromUrl =
+    url.pathname.split("/")[1] &&
+    path.join(resolvedPath, `./data/${url.pathname.split("/")[1]}.txt`);
+  const pathname =
+    dynamicPathFromUrl && files.includes(dynamicPathFromUrl)
+      ? dynamicPathFromUrl
+      : randomFilePath;
+  const searchParams = url.searchParams;
   if (method === "GET") {
-    const data = fs.readFileSync(
-      path.join(resolvedPath, "./data/text.txt"),
-      "utf-8"
-    );
+    const data = fs.readFileSync(pathname, "utf-8");
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.end(data);
   }
